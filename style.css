@@ -1,0 +1,316 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+
+/* Header */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background-color: #111827;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #38bdf8;
+}
+
+
+/* Home */
+
+.home {
+    min-height: 90vh;
+    padding: 60px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #e0f2fe;
+}
+
+.home-text {
+    max-width: 550px;
+
+    animation: slideIn 1.5s ease;
+}
+
+.hello {
+    font-size: 22px;
+}
+
+.home-text h1 {
+    font-size: 55px;
+    margin: 10px 0;
+    color: #0369a1;
+}
+
+.home-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+
+/* Button */
+
+.button {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    background-color: #0284c7;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #075985;
+}
+
+
+/* Home Image */
+.home-image {
+    animation: float 3s infinite ease-in-out;
+}
+
+.circle {
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background-color: #0284c7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+
+
+    object-fit: cover;
+}
+
+
+/* Common Section */
+
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section h1 {
+    font-size: 35px;
+    margin-bottom: 25px;
+    color: #0369a1;
+}
+
+.section > p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+
+/* Skills */
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    width: 220px;
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+}
+
+.skill-box h2 {
+    color: #0284c7;
+    margin-bottom: 10px;
+}
+
+.skill-box p {
+    line-height: 1.5;
+}
+
+
+/* Education */
+
+.education-box {
+    max-width: 600px;
+    margin: auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.education-box h2 {
+    color: #0284c7;
+    margin-bottom: 15px;
+}
+
+.education-box p {
+    margin: 10px;
+}
+
+
+/* Contact */
+
+.contact-box {
+    max-width: 500px;
+    margin: auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    line-height: 2;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer */
+
+footer {
+    padding: 20px;
+    text-align: center;
+
+    background-color: #111827;
+    color: white;
+}
+
+
+/* Animation 1 */
+
+@keyframes slideIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* Animation 2 */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px;
+        font-size: 70px;
+    }
+
+}
